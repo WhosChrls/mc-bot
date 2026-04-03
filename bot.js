@@ -7,7 +7,7 @@ require('http').createServer((req, res) => {
 
 function createBot() {
   const bot = mineflayer.createBot({
-    host: 'Henrix04.aternos.me',
+    host: 'Henrix04.aternos.me:43508',
     port: 43508,
     username: 'Bot123',
     auth: 'offline',
