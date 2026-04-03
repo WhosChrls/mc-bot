@@ -1,18 +1,22 @@
 const mineflayer = require('mineflayer')
 
+// 👇 Fake web server for Render
+require('http').createServer((req, res) => {
+  res.end('Bot is running')
+}).listen(3000)
+
 function createBot() {
   const bot = mineflayer.createBot({
     host: 'Henrix04.aternos.me',
     port: 43508,
-    username: 'mcbot',
-    auth: 'offline', // 👈 IMPORTANT
+    username: 'Bot123',
+    auth: 'offline',
     version: false
   })
 
   bot.on('spawn', () => {
     console.log('✅ Bot joined')
 
-    // Anti-AFK
     setInterval(() => {
       bot.setControlState('jump', true)
       setTimeout(() => bot.setControlState('jump', false), 500)
