@@ -4,7 +4,9 @@ function createBot() {
   const bot = mineflayer.createBot({
     host: 'Henrix04.aternos.me:43508',
     port: 43508,
-    username: 'mcbot'
+    username: 'mcbot',
+    auth: 'offline', // 👈 IMPORTANT
+    version: false
   })
 
   bot.on('spawn', () => {
